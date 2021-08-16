@@ -1,11 +1,3 @@
-drop table if exists "dept_emp";
-drop table if exists "titles";
-drop table if exists "dept_manager";
-drop table if exists "departments";
-drop table if exists "salaries";
-drop table if exists "employees";
-drop type if exists sex;
-
 CREATE TABLE "departments" (
     "dept_no" varchar(10)   NOT NULL,
     "dept_name" varchar(255)   NOT NULL,
@@ -77,5 +69,3 @@ CREATE TABLE "salaries" (
       FOREIGN KEY(emp_no) 
 		  REFERENCES employees(emp_no)
 );
-
--- select * from departments;
