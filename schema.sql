@@ -11,7 +11,10 @@ CREATE TABLE "titles" (
     "title" varchar(255)   NOT NULL,
     CONSTRAINT "pk_titles" PRIMARY KEY (
         "title_id"
-    )
+    ),
+    CONSTRAINT fk_title
+      FOREIGN KEY(emp_title_id) 
+		  REFERENCES titles(title_id)
 );
 
 CREATE TYPE sex AS ENUM ('M', 'F');
